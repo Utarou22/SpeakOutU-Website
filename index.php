@@ -1,3 +1,8 @@
+<?php
+require_once 'includes/config_session.inc.php';
+require_once 'includes/login_view.inc.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +25,10 @@
             <br>
             <button type="button" class="create-account" id="create-account" onclick="window.location.href='signup.php';">Create an Account</button>
         </form>
+
+        <?php
+        check_login_errors();
+        ?>
     </div>
 </body>
 </html>
