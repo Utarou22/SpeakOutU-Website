@@ -17,9 +17,9 @@ require_once 'includes/signup_view.inc.php';
 <body>
     <form class="signup-container" action="includes/signup.inc.php" method="post">
         <label class="signup-message">CREATE ACCOUNT</label>
-        <input type="text" id="email" name="create-email" placeholder="Enter School Email">
-        <input type="password" id="password" name="create-password" placeholder="Create Password">
-        <input type="password" id="re-password" name="re-password" placeholder="Re-enter Password">
+        <?php
+        signup_inputs();
+        ?>
         <button type="submit" class="signup-button" id="signup-button">SIGN UP</button>
         <button type="button" class="re-login" id="re-login">Back to Login</button>
     </form>

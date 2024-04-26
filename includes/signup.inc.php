@@ -28,12 +28,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         require_once 'config_session.inc.php';
 
+        $_SESSION["signup_successful"] = false;
+
         if ($errors) {
             $_SESSION["errors_signup"] = $errors;
+
+            $signup_data = [
+                "user_email" => $user_email
+            ];
+
+            $_SESSION["signup_data"] = $signup_data;
+
             header("Location: ../signup.php");
             die();
         }
 
+        $_SESSION["signup_successful"] = true;
         create_user($pdo, $user_email, $user_password);
 
         header("Location: ../signup.php?signup=success");
