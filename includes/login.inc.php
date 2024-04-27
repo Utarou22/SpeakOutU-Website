@@ -19,10 +19,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $result = get_user_email($pdo, $user_email);
 
         if (is_email_wrong($result)) {
-            $errors["login_incorrect"] = "Incorrect login info!";
+            $errors["login_incorrect"] = "Incorrect email or password!";
         }
         if (!is_email_wrong($result) && is_password_wrong($user_password, $result["user_password"])) {
-            $errors["login_incorrect"] = "Incorrect login info!";
+            $errors["login_incorrect"] = "Incorrect email or password!";
         }
 
         require_once 'config_session.inc.php';
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($errors) {
             $_SESSION["errors_login"] = $errors;
 
-            header("Location: ../signup.php");
+            header("Location: ../index.php");
             die();
         }
 
