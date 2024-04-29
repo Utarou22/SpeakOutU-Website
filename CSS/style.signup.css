@@ -70,6 +70,11 @@ body {
     outline: none;
 }
 
+.signup-container input[type="text"]::placeholder ,
+.signup-container input[type="password"]::placeholder {
+    color: #999999;
+}
+
 .signup-button {
     padding: 8px;
     margin: 1%;

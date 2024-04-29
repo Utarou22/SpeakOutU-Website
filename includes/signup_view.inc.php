@@ -10,6 +10,10 @@ function signup_inputs() {
     !isset($_SESSION["errors_signup"]["invalid_email"])) {
         echo '<input type="text" id="email" name="create-email" 
         placeholder="Enter School Email" value="' . $_SESSION["signup_data"]["user_email"] .'">';
+    } else if (isset($_GET["signup"]) && $_GET["signup"] === "success"){
+        $_SESSION["signup_data"] = "";
+        echo '<input type="text" id="email" name="create-email" 
+        placeholder="Enter School Email" value="' . $_SESSION["signup_data"] .'">';
     } else {
         echo '<input type="text" id="email" name="create-email" placeholder="Enter School Email">';
     }
@@ -36,7 +40,6 @@ function check_signup_errors() {
 
         unset($_SESSION['errors_signup']);
     } else if (isset($_GET["signup"]) && $_GET["signup"] === "success"){
-        echo '<br>';
-        echo '<p class="form-success>Signup Successful!</p>';
+        $_SESSION["signup_data"]["user_email"] = "";
     }
 } 
