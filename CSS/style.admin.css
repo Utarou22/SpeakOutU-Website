@@ -104,6 +104,10 @@ body {
     margin: 10px;
 }
 
+.buttons-container {
+    flex-basis: 50%;
+}
+
 .ad-button {
     flex-basis: 10%;
     font-size: 30px;

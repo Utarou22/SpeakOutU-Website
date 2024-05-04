@@ -32,11 +32,20 @@ require_once 'includes/home_view.inc.php';
         <div class="sub-overlay">
             <nav class="action-bar">
                 <div class="sub-action-bar">
-                    <button type="button" class="create-post"><i class="fa-solid fa-plus"></i>CREATE NEW POST</button>
+                    <button type="button" class="create-post" onclick="toggleCreatePostOverlay()"><i class="fa-solid fa-plus"></i>CREATE NEW POST</button>
                     <input type="text" class="search-bar" placeholder="search a topic...">
                 </div>
             </nav>
             <div class="newsfeed-wrapper">
+                <section class="create-post-overlay" id="create-post-overlay">
+                    <form class="create-post-pane">
+                        <textarea class="post-input" placeholder="Write something..."></textarea>
+                        <div class="create-post-buttons">
+                            <button class="cancel-button">Cancel</button>
+                            <button class="submit-button">Submit Post</button>
+                        </div>
+                    </form>
+                </section>
                 <section class="newsfeed-section">
                     <?php
                         display_db_posts();
