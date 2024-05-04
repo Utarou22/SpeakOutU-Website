@@ -21,7 +21,12 @@ require_once 'includes/adminlogin_view.inc.php';
                 <input type="text" id="email" name="admin-name" placeholder="Username">
                 <input type="password" id="password" name="admin-password" placeholder="Password">
             </div>
-            <button type="button" class="login-button">LOGIN</button>
+            <div class="prompt-container">
+                <?php
+                    check_login_errors();
+                ?>
+            </div>
+            <button type="submit" class="login-button">LOGIN</button>
         </form>
     </div>
 </body>

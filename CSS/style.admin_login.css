@@ -80,7 +80,7 @@ body {
 .inputs input[type="password"] {
     padding: 10px;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     background: none;
     border: none;
     border-bottom: 1px solid #b2b2b2;
@@ -130,3 +130,22 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+.prompt-container {
+    padding: auto;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.form-error {
+    padding: 0px;
+    margin: 0;
+    width: auto;
+    height: auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #FF8C00;
+}
