@@ -1,0 +1,132 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+.basic-mode {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    transform-origin: top right;
+}
+
+.basic-mode:hover {
+    transform: scale(1.1);
+}
+
+.basic-mode .fa-circle-arrow-left {
+    font-size: 30px;
+    color: white;
+    opacity: 0.1;
+}
+
+.basic-mode .fa-circle-arrow-left:hover {
+    opacity: 0.3;
+}
+
+.overlay {
+    margin: auto;
+    padding: 40px;
+    width: 350px;
+    height: 250px;
+    max-width: 350px;
+    max-height: 250px;
+    background-color: #f2f2f2;
+    border-radius: 30px;
+}
+
+.overlay::before {
+    content: '';
+    background: #8fa2dd;
+    background-image: url(login-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+    filter: brightness(0.15);
+    z-index: -1;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.inputs input[type="text"],
+.inputs input[type="password"] {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 30px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #b2b2b2;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.inputs input[type="password"] {
+    margin-bottom: 1px;
+}
+
+.inputs input[type="text"]:focus,
+.inputs input[type="password"]:focus {
+    outline: none;
+}
+
+.inputs input[type="text"]::placeholder,
+.inputs input[type="password"]::placeholder {
+    color: #999999;
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-button {
+    padding: 8px;
+    margin: 0;
+    color: #f2f2f2;
+    width: 150px;
+    border: none;
+    border-radius: 30px;
+    background: #8da6f6;
+    background: linear-gradient(75deg, #8da6f6 0%, #6483fc 50%, #0e0eda 100%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    bottom: 0;
+}
+
+.login-button:hover {
+    background: linear-gradient(215deg, #8da6f6 0%, #6483fc 50%, #0e0eda 100%);
+}
+
+.login-button:active {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
