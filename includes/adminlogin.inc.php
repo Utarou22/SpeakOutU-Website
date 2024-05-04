@@ -13,10 +13,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         //ERROR HANDLERS
         if (is_input_empty($admin_name, $admin_password)) {
-            $errors[] = 'Fill in all fields';
+            $errors["empty_input"] = 'Fill in all fields';
         }
 
         $result = get_admin_name($pdo, $admin_name);
+
+        
 
     } catch (PDOException $e) {
         die("Query Failed: " . $e->getMessage());
