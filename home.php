@@ -1,3 +1,8 @@
+<?php
+require_once 'includes/config_session.inc.php';
+require_once 'includes/home_view.inc.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,11 +31,20 @@
         </nav>
         <div class="sub-overlay">
             <nav class="action-bar">
-                
+                <div class="sub-action-bar">
+                    <button type="button" class="create-post"><i class="fa-solid fa-plus"></i>CREATE NEW POST</button>
+                    <input type="text" class="search-bar" placeholder="search a topic...">
+                </div>
             </nav>
+            <div class="newsfeed-wrapper">
+                <section class="newsfeed-section">
+                    <?php
+                        display_db_posts();
+                    ?>
+                </section>
+            </div>
             <div class="information-pane">
-                <h2 class="title">TRENDING</h2>
-                <p>Hello</p>
+                <h class="pane-title">TRENDING!!!</h>
             </div>
         </div>
     </div>

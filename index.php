@@ -10,8 +10,10 @@ require_once 'includes/login_view.inc.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.login.css">
+    <script src="https://kit.fontawesome.com/f8e1898ab0.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <button class="admin-mode" onclick="window.location.href='admin_login.php'"><i class="fa-solid fa-wrench"></i></button>
     <div class="overlay">
         <form class="login-container" action="includes/login.inc.php" method="post">
             <h2 class="welcome-message">WELCOME</h2>

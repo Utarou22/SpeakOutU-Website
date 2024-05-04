@@ -38,6 +38,31 @@ body {
     z-index: -1;
 }
 
+.admin-mode {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    transform-origin: top right;
+}
+
+.admin-mode:hover {
+    transform: scale(1.1);
+}
+
+.admin-mode .fa-wrench {
+    font-size: 30px;
+    color: white;
+    opacity: 0.1;
+}
+
+.admin-mode .fa-wrench:hover {
+    opacity: 0.3;
+}
+
 .login-container {
     display: flex;
     flex-direction: column;
