@@ -40,9 +40,20 @@ require_once 'includes/home_view.inc.php';
                 <section class="create-post-overlay" id="create-post-overlay">
                     <form class="create-post-pane">
                         <textarea class="post-input" placeholder="Write something..."></textarea>
-                        <div class="create-post-buttons">
-                            <button class="cancel-button">Cancel</button>
-                            <button class="submit-button">Submit Post</button>
+                        <div class="utilities-area">
+                            <div class="tag-input-container">
+                                <div class="tag-area" id="tag-area">
+                                    <p class="tag-counter" id="tag-counter">0/3</p>
+                                </div>
+                                <div class="tag-input-pane">
+                                    <input type="text" class="tag-input" id="tag-input" placeholder="Type tags...">
+                                    <button class="add-tag-button" id="add-tag-button">Add Tag</button>
+                                </div>
+                            </div>
+                            <div class="create-post-buttons">
+                                <button class="cancel-button">Cancel</button>
+                                <button class="submit-button">Submit Post</button>
+                            </div>
                         </div>
                     </form>
                 </section>

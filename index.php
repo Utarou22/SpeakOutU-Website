@@ -24,7 +24,7 @@ require_once 'includes/login_view.inc.php';
                 check_login_errors();
                 ?>
             </div>
-            <button type="submit" class="login-button" id="login-button">LOGIN</button>
+            <button type="subm it" class="login-button" id="login-button">LOGIN</button>
             <button type="button" class="forgot-password" id="forgot-password">Forgot Password?</button>
             <br>
             <button type="button" class="create-account" id="create-account" onclick="window.location.href='signup.php'">Create an Account</button>
